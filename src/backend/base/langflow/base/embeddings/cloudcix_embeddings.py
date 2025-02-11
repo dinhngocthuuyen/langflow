@@ -1,5 +1,5 @@
 from langchain_openai import OpenAIEmbeddings
-from typing import List, Tuple, Iterable, Union, Dict, Any
+from typing import List, Tuple, Iterable, Union
 
 class CloudCIXEmbeddings(OpenAIEmbeddings):
     def _tokenize(
