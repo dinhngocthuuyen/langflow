@@ -14,7 +14,7 @@ from .openai import OpenAIEmbeddingsComponent
 from .similarity import EmbeddingSimilarityComponent
 from .text_embedder import TextEmbedderComponent
 from .vertexai import VertexAIEmbeddingsComponent
-
+from .cloudcix import CloudCIXEmbeddingsComponent
 __all__ = [
     "AIMLEmbeddingsComponent",
     "AmazonBedrockEmbeddingsComponent",
@@ -32,4 +32,5 @@ __all__ = [
     "OpenAIEmbeddingsComponent",
     "TextEmbedderComponent",
     "VertexAIEmbeddingsComponent",
+    "CloudCIXEmbeddingsComponent"
 ]

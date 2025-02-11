@@ -9,7 +9,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - LANGFLOW_DATABASE_URL=postgresql://langflow:langflow@postgres:5432/langflow
+      - LANGFLOW_DATABASE_URL=postgresql://postgres:1@postgres:5432/cloudcix
       # This variable defines where the logs, file storage, monitor data and secret keys are stored.
     volumes:
       - langflow-data:/app/langflow
@@ -17,9 +17,9 @@ services:
   postgres:
     image: postgres:16
     environment:
-      POSTGRES_USER: langflow
-      POSTGRES_PASSWORD: langflow
-      POSTGRES_DB: langflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: cloudcix
     expose:
       - 5432
     volumes:

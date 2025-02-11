@@ -7,6 +7,7 @@ services:
       context: ..
       dockerfile: docker/dev.Dockerfile
     image: dev-langflow
+    tty: true
     container_name: dev-langflow
     restart: always
     ports:
@@ -14,9 +15,9 @@ services:
       - "3000:3000"
     environment:
       - PYTHONDONTWRITEBYTECODE=1
-      - LANGFLOW_DATABASE_URL=postgresql://langflow:langflow@postgres:5432/langflow
-      - LANGFLOW_SUPERUSER=langflow
-      - LANGFLOW_SUPERUSER_PASSWORD=langflow
+      - LANGFLOW_DATABASE_URL=postgresql://postgres:1@postgres:5432/cloudcix
+      - LANGFLOW_SUPERUSER=postgres
+      - LANGFLOW_SUPERUSER_PASSWORD=1
       - LANGFLOW_CONFIG_DIR=/var/lib/langflow
     env_file:
       - ../.env
@@ -27,16 +28,14 @@ services:
     networks:
       -  dev-langflow
 
-
-  postgres:
-    container_name: postgres
-    image: pgvector/pgvector:pg16
-    environment:
-      POSTGRES_USER: langflow
-      POSTGRES_PASSWORD: langflow
-      POSTGRES_DB: langflow
-    ports:
-      - "5432:5432"
-    networks:
-      -  dev-langflow
-
+  # postgres:
+  #   container_name: postgres
+  #   image: pgvector/pgvector:pg16
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: 1
+  #     POSTGRES_DB: cloudcix
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     -  dev-langflow
