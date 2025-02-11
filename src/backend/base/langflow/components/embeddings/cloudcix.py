@@ -1,5 +1,4 @@
-from langchain_openai import OpenAIEmbeddings
-
+from langflow.base.embeddings.cloudcix_embeddings import CloudCIXEmbeddings
 from langflow.base.embeddings.model import LCEmbeddingsModel
 from langflow.base.models.cloudcix_constants import CLOUDCIX_EMBEDDING_MODEL_NAMES, CLOUDCIX_BASE_URL
 from langflow.field_typing import Embeddings
@@ -72,7 +71,7 @@ class CloudCIXEmbeddingsComponent(LCEmbeddingsModel):
     ]
 
     def build_embeddings(self) -> Embeddings:
-        return OpenAIEmbeddings(
+        return CloudCIXEmbeddings(
             client=self.client or None,
             model=self.model,
             dimensions=self.dimensions or None,
