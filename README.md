@@ -1,10 +1,10 @@
 ## 📦 Quickstart
 ```shell
 cd docker
-docker compose -f cd dev.docker-compose.yml up
+docker compose -f dev.docker-compose.yml up
 ```
 
-Default Username: postgres
+Default Username: postgres \n
 Default Password: 1
 
 ## Introduction
