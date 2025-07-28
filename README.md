@@ -19,6 +19,7 @@ Key Features: <br/>
 
 ## Demonstration
 With a user-friendly drag-and-drop interface, users can efficiently upload and process data with minimal effort. Here an example for RAG:
+
  <img width="468" alt="image" src="https://github.com/user-attachments/assets/3e72a358-c7a4-4e8c-ae8f-9b4885e84201" />
 
 **The Ingestion Flow** loads data from a local file and external URLs then embed it into the vector database.  <br/>
