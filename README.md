@@ -59,8 +59,3 @@ Message Storage Flow:  <br/>
 a.	When a user sends a message, a Message object is called including various attributes such as text, sender, sender_name, session_id, timestamp, flow_id, and a unique id <br/>
 b.	To retrieve messages, the system queries the storage based on parameters: flow_id, session_id, sender, or sender_name <br/>
 c.	Once the query is executed, the resulting messages are transformed into MessageResponse objects. <br/>
-
-## Instructions on implementing Multi-tenancy within the system.
-## Hardware requirements and information on the hardware the system runs on.
-## Ensuring no bottleneck on the virtual machine.
-## Deployment
